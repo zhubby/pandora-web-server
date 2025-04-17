@@ -23,6 +23,7 @@ clap.workspace = true
 http.workspace = true
 pandora-module-utils.workspace = true
 pingora.workspace = true
+pingora-core.workspace = true
 serde.workspace = true
 
 [lints]

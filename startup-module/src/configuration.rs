@@ -18,7 +18,8 @@ use pandora_module_utils::pingora::{
     http_proxy_service, Error, ErrorType, ProxyHttp, Server, ServerConf, ServerOpt,
 };
 use pandora_module_utils::{DeserializeMap, OneOrMany};
-use pingora::listeners::{TcpSocketOptions, TlsAccept, TlsSettings};
+use pingora::listeners::{TcpSocketOptions, TlsAccept};
+use pingora_core::listeners::tls::TlsSettings;
 use pingora::services::Service;
 use pingora::tls::ext::ssl_add_chain_cert;
 use pingora::tls::{
@@ -27,7 +28,7 @@ use pingora::tls::{
     ssl::{NameType, SslRef},
     x509::X509,
 };
-use pingora::utils::CertKey;
+use pingora::utils::tls::CertKey;
 use serde::de::{Deserialize, Deserializer, MapAccess, Visitor};
 use std::collections::HashMap;
 use std::fs::read;
